@@ -1,0 +1,12 @@
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore Docker stuff (optional)
+*.pid
+*.log
