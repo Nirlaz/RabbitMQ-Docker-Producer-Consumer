@@ -1,0 +1,15 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  dotnetapp:
+    image: myapp
+    depends_on:
+      - rabbitmq
+    environment:
+      - RabbitMQ__HostName=rabbitmq
+    ports:
+      - "5000:80"
